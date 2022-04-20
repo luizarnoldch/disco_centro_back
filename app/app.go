@@ -12,7 +12,7 @@ import (
 	"github.com/joho/godotenv"
 	"github.com/luizarnoldch/disco_centro_back/src/discos/application"
 	"github.com/luizarnoldch/disco_centro_back/src/discos/infraestructure"
-	"github.com/luizarnoldch/disco_centro_back/src/logger"
+	"github.com/luizarnoldch/disco_centro_lib/logger"
 )
 
 func sanityCheck() {

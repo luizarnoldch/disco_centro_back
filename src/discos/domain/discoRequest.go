@@ -1,6 +1,6 @@
 package domain
 
-import "github.com/luizarnoldch/disco_centro_back/src/errs"
+import "github.com/luizarnoldch/disco_centro_lib/errs"
 
 type DiscoRequest struct {
 	Id                uint64 `json:"id_disco"`

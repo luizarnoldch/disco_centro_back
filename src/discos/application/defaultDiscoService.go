@@ -5,7 +5,7 @@ import (
 
 	"github.com/luizarnoldch/disco_centro_back/src/discos/domain"
 	"github.com/luizarnoldch/disco_centro_back/src/discos/infraestructure"
-	"github.com/luizarnoldch/disco_centro_back/src/errs"
+	"github.com/luizarnoldch/disco_centro_lib/errs"
 )
 
 type DefaultDiscoService struct {

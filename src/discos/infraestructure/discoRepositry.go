@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 
 	"github.com/luizarnoldch/disco_centro_back/src/discos/domain"
-	"github.com/luizarnoldch/disco_centro_back/src/errs"
+	"github.com/luizarnoldch/disco_centro_lib/errs"
 )
 
 type DiscoRepository interface {

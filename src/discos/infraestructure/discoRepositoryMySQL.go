@@ -9,8 +9,8 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
 	"github.com/luizarnoldch/disco_centro_back/src/discos/domain"
-	"github.com/luizarnoldch/disco_centro_back/src/errs"
-	"github.com/luizarnoldch/disco_centro_back/src/logger"
+	"github.com/luizarnoldch/disco_centro_lib/errs"
+	"github.com/luizarnoldch/disco_centro_lib/logger"
 )
 
 type DiscoRepositoryMySQL struct {
