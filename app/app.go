@@ -60,7 +60,7 @@ func Start() {
 		HandleFunc("/api/disco/{id_disco:[0-9]+}", dc.GetDisco).
 		Methods(http.MethodGet).
 		Name("GetDisco")
-
+	
 	router.
 		HandleFunc("/api/disco", dc.PostDisco).
 		Methods(http.MethodPost).
@@ -76,6 +76,9 @@ func Start() {
 		Methods(http.MethodDelete).
 		Name("DeleteDisco")
 
+	// Auth Middleware
+	am := AuthMiddleware{infraestructure.NewAuthRepository()}
+	router.Use(am.AuthorizationHandler())
 	// starting server
 	address := os.Getenv("SERVER_ADDRESS")
 	port := os.Getenv("SERVER_PORT")

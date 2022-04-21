@@ -22,12 +22,12 @@ func (a AuthMiddleware) AuthorizationHandler() func(http.Handler) http.Handler {
 
 			if authHeader != "" {
 				token := getTokenFromHeader(authHeader)
-				isAuthorized := a.repo.IsAuthorized(token, currentRoute.GetName(), currentRouteVars)
 
+				isAuthorized := bool(a.repo.IsAuthorized(token, currentRoute.GetName(), currentRouteVars))
 				if isAuthorized {
 					next.ServeHTTP(w, r)
 				} else {
-					appError := errs.AppError{http.StatusForbidden, "Unauthorized"}
+					appError := errs.AppError{Code: http.StatusForbidden, Message: "Unauthorized"}
 					writeResponse(w, appError.Code, appError.AsMessage())
 				}
 			} else {
